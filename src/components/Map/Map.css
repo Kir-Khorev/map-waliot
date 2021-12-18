@@ -1,12 +1,25 @@
 #map { 
-  height: 600px;
-  width: 600px; 
+  height: 100%;
+  width: 100%; 
   border: 1px solid #282c34;
-  margin: auto;
+  z-index: 0;
+}
+
+.mapWrapper {
+  display: flex;
+  justify-content: space-between;
 }
   
 .leaflet-container {
-  width: 600px;
-  height: 600px;
+  width: auto;
+  height: 100vh;
   margin: auto;
 }
+
+.carsList {
+  border: 1px solid #282c34;
+  width: 500px;
+  height: 100%;
+  z-index: 101;
+}
+

@@ -19,13 +19,18 @@ export default function Map(props) {
             })
     }, []);
 
-    const localFunc = () => {
-        console.log(123);
+    const localFunc = (e) => {
+        console.log('click #', e);
+        cars.map(i => {
+            if (i.id === e) {
+                console.log('chose one', i.id)
+            }
+        })
         return
     };
 
     return (
-        <>
+        <div className='mapWrapper'>
             <div id="map">
                 <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={false}>
                     <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -33,7 +38,7 @@ export default function Map(props) {
                     />
                     {
                         cars.map(elem => {
-                            return <Marker key={elem.id} position={[elem.latitude, elem.longitude]} onClick={localFunc} >
+                            return <Marker key={elem.id} position={[elem.latitude, elem.longitude]} >
                                 <Popup>{elem.name}, {elem.id}</Popup>
                             </Marker>
                         })
@@ -44,12 +49,12 @@ export default function Map(props) {
                 <h1>Объекты</h1>
                 {
                     cars.map(e => {
-                        return <div onClick={localFunc}>
+                        return <div onClick={() => localFunc(e.id)}>
                             <CarsItem onClick={localFunc} carsList={cars} key={e.id} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
                         </div>
                     })
                 }
             </div>
-        </>
+        </div>
     )
 }
