@@ -12,7 +12,7 @@ SPA made with React (Hooks) and Leaflet (open-source JavaScript library for mobi
 - React hooks 
 - Leaflet library
 
-## Authors
+### Authors
 Kir Khorev
 
 ## License
