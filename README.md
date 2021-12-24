@@ -1,7 +1,7 @@
 # React menu
 SPA made with React (Hooks) and Leaflet (open-source JavaScript library for mobile-friendly interactive maps).
 
-> - [Live Demo](https://menu-app-kappa.vercel.app/) :maps:
+> - [Live Demo](https://map-waliot-test.vercel.app/) :world_map:
 
 ![screenshot](src/assets/img/screenshot.png "screenshot")
 
