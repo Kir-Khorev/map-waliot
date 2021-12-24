@@ -27,8 +27,8 @@ export default function CarsList({ map, cars }) {
             {
                 cars.map(e => {
                     const center = [e.latitude, e.longitude]
-                    return <div onClick={() => onClickFunc(center)} >
-                        <CarsItem carsList={cars} key={e.id} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
+                    return <div key={e.id} onClick={() => onClickFunc(center)} >
+                        <CarsItem carsList={cars} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
                     </div>
                 })
             }

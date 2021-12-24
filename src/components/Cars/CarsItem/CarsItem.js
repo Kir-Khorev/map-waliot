@@ -1,5 +1,5 @@
 import React from 'react';
-import carsItem from './carsItem.css'
+import './carsItem.css'
 
 export default function CarsItem({ id, name, latitude, longitude }) {
     return (
