@@ -5,6 +5,7 @@ import './CarsList.css';
 export default function CarsList({ map, cars }) {
     const zoom = 10;
     const [position, setPosition] = useState(map.getCenter());
+    console.log(position);
 
     const onClickFunc = useCallback((center) => {
         map.setView(center, zoom)
