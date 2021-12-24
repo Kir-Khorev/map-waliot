@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import CarsItem from './CarsItem/CarsItem';
 import './CarsList.css';
 

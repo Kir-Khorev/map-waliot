@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './Map.css';
 import CarsList from '../Cars/CarsList';
@@ -28,8 +28,7 @@ export default function Map (props) {
                     })
                 }
             </MapContainer>
-        ),
-        [],
+        ),[cars],
     )
 
     return (
