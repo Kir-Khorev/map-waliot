@@ -1,30 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import CarsItem from './CarsItem/CarsItem';
-import carsData from '../../services/carsData';
+import './CarsList.css';
 
-export default function CarsList(props) {
-    const [cars, setCars] = useState([]);
+export default function CarsList({ map, cars }) {
+    const zoom = 10;
+    const [position, setPosition] = useState(map.getCenter());
+
+    const onClickFunc = useCallback((center) => {
+        map.setView(center, zoom)
+    }, [map])
+
+    const onMove = useCallback(() => {
+        setPosition(map.getCenter())
+    }, [map])
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/waliot/test-tasks/master/assets/data/frontend-1-dataset.json')
-            .then((response) => response.json())
-            .then((json) => {
-                setCars(json)
-            })
-            .catch(err => {
-                console.log('err', err);
-            })
-    }, []);
+        map.on('move', onMove)
+        return () => {
+            map.off('move', onMove)
+        }
+    }, [map, onMove])
 
     return (
-        <div div className='carsList' >
-            <h1>Объекты</h1>
+        <div className='carsList'>
+            <h1>Доступные машины</h1>
             {
                 cars.map(e => {
-                    return <CarsItem key={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
+                    const center = [e.latitude, e.longitude]
+                    return <div onClick={() => onClickFunc(center)} >
+                        <CarsItem carsList={cars} key={e.id} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
+                    </div>
                 })
             }
         </div>
     )
 }
-

@@ -1,8 +1,6 @@
 #map { 
-  height: 100%;
+  height: 100vh;
   width: 100%; 
-  border: 1px solid #282c34;
-  z-index: 0;
 }
 
 .mapWrapper {

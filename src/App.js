@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Map from './components/Map/Map';
 import Footer from './components/Footer';
 import Header from './components/Header';
