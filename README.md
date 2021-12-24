@@ -1,3 +1,24 @@
+# React menu
+SPA made with React (Hooks) and Leaflet (open-source JavaScript library for mobile-friendly interactive maps).
+
+> - [Live Demo](https://menu-app-kappa.vercel.app/) :map:
+
+![screenshot](src/assets/img/screenshot.png "screenshot")
+
+## Practiced:
+- React 
+- Redux 
+- database 
+- React hooks 
+- Leaflet library
+
+## Authors
+Kir Khorev
+
+## License
+This project is licensed under Unlicense license.
+Copyright (c) 2021
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -11,7 +11,6 @@ const Footer = () => {
             width: '100%',
             padding: '20px 0',
             textAlign: 'center',
-            marginTop: '20px'
         }}>
             <div>Walliot test-map. Copyright © 2021</div>
         </footer>

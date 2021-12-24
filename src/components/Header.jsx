@@ -11,7 +11,6 @@ const Header = () => {
             width: '100%',
             padding: '15px 0',
             textAlign: 'center',
-            marginBottom: '20px'
         }}>
             <div>Walliot test-map</div>
         </header>
