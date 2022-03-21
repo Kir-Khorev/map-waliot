@@ -1,6 +1,6 @@
 // import React, { useEffect, useState, useCallback } from 'react';
 // import CarsItem from './CarsItem/CarsItem';
-// import './CarsList.css';
+// // import './CarsList.css';
 
 // export default function CarsList({ map, cars }) {
 //     const zoom = 10;

@@ -1,0 +1,23 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "JS Post 0",
+            "body": "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio consequatur cum! Quia at deserunt veniam corporis, placeat nemo illo iste dolorem facere in temporibus quasi sapiente fuga beatae accusamus?"
+        },
+        {
+            "id": 2,
+            "title": "CSS Post 1",
+            "body": "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio consequatur cum! Quia at deserunt veniam corporis, placeat nemo illo iste dolorem facere in temporibus quasi sapiente fuga beatae accusamus?"
+        },
+        {
+            "id": 3,
+            "title": "HTML Post 2",
+            "body": "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio consequatur cum! Quia at deserunt veniam corporis, placeat nemo illo iste dolorem facere in temporibus quasi sapiente fuga beatae accusamus?"
+        }
+    ],
+    "about": {
+        "title": "About Page"
+    },
+    "cars": {}
+}

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.carsList {
+    background: rgba(240, 132, 60, 0.205);
+    border: 1px solid #ccc;
+}
+
+#map { 
+  height: 50vh;
+  width: 50%; 
+}
+
+.leaflet-container {
+    width: auto;
+    height: 50vh;
+}

@@ -1,4 +1,4 @@
-/* .carsItemWrapper {
+.carsItemWrapper {
     border: 1px solid #525252;
 }
 
@@ -15,6 +15,6 @@
     background: rgba(194, 190, 190, 0.151);
 }
    
-p, h4, h3 {
+.latitude {
     margin: 5px;
-} */
+}

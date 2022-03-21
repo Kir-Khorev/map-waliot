@@ -1,0 +1,40 @@
+#map { 
+    height: 50vh;
+    width: 100%; 
+  }
+  
+  .mapWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+  }
+    
+  .leaflet-container {
+    width: auto;
+    height: 50vh;
+    /* margin: auto; */
+  }
+  
+  .carsList {
+    border: 1px solid #4e7bd4;
+    min-width: 300px;
+    height: 100%;
+    text-align: center;
+    z-index: 101;
+  }
+  
+  
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* @media only screen and (min-width: 768px) {
+    #map { 
+      height: 80vh;
+    }
+    .mapWrapper {
+      flex-direction: row;
+    }
+    .leaflet-container {
+      height: 100vh;
+    }
+  } */
