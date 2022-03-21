@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import classes from '../../styles/map.module.css';
 import CarsList from '../Cars/CarsList';
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic"
-
 
 export default function Map({ cars: servCars }) {
     const [cars, setCars] = useState(servCars);
@@ -12,7 +10,6 @@ export default function Map({ cars: servCars }) {
         ssr: false
     })
     // const [map, setMap] = useState(0);
-
     // const router = useRouter();
 
     // Load data from API
@@ -31,7 +28,6 @@ export default function Map({ cars: servCars }) {
         return <h1>Loading cars list...</h1>
     }
 
-
     // const displayMap = useMemo(
     //     () => (
     // <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} whenCreated={setMap}>
@@ -47,35 +43,21 @@ export default function Map({ cars: servCars }) {
     //     ), [cars],
     // )
 
+
     return (
         <div className={classes.mapWrapper}>
-            <h2>Map</h2>
             <MapWithNoSSR cars={cars} />
+            {/* <CarsList cars={cars} /> */}
             {/* <div id="map">
                 {cars.length ? displayMap : <div>Load...</div>}
             </div> */}
-            {/* <CarsList map={map} cars={cars} /> */}
+            {/* <CarsList cars={cars} /> */}
             {/* {map ? <CarsList map={map} cars={cars} /> : <div>Load cars List...</div>} */}
         </div>
     )
 }
 
-// export async function getServerSideProps(context) {
-//     if (!context.req) {
-//         return { cars: null }
-//     }
-
-//     const res = await fetch('http://localhost:4200/posts')
-//     const cars = await res.json()
-
-//     return {
-//         props: {
-//             cars
-//         }
-//     }
-// }
-
-Map.getInitialProps = async (context) => {
+export async function getServerSideProps(context) {
     if (!context.req) {
         return { cars: null }
     }
@@ -89,3 +71,18 @@ Map.getInitialProps = async (context) => {
         }
     }
 }
+
+// Map.getInitialProps = async (context) => {
+//     if (!context.req) {
+//         return { cars: null }
+//     }
+
+//     const res = await fetch('https://raw.githubusercontent.com/waliot/test-tasks/master/assets/data/frontend-1-dataset.json')
+//     const cars = await res.json()
+
+//     return {
+//         props: {
+//             cars
+//         }
+//     }
+// }
