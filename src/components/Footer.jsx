@@ -12,7 +12,7 @@ const Footer = () => {
             padding: '20px 0',
             textAlign: 'center',
         }}>
-            <div>Walliot test-map. Copyright © 2021</div>
+            <div>Walliot cars map. Copyright © 2021</div>
         </footer>
     )
 }

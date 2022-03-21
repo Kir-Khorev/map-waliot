@@ -24,7 +24,7 @@ export default function CarsList({ map, cars }) {
 
     return (
         <div className='carsList'>
-            <h1>Доступные машины</h1>
+            <h1>Available cars</h1>
             {
                 cars.map(e => {
                     const center = [e.latitude, e.longitude]

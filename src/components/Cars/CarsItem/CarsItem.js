@@ -7,8 +7,8 @@ export default function CarsItem({ id, name, latitude, longitude }) {
             <div className='carsItem'>
                 <h3>Model: {name}, Id:{id}</h3>
                 <div>
-                    <h4>Координаты:</h4>
-                    <p>Широта: {latitude}, Долгота: {longitude}</p>
+                    {/* <h4>Coordinates:</h4> */}
+                    <p>Latitude : {latitude}, Longitude: {longitude}</p>
                 </div>
             </div>
         </div>
