@@ -7,7 +7,7 @@ const Footer = () => {
             left: '0',
             bottom: '0',
             width: '100%',
-            padding: '20px 0',
+            padding: '15px 0',
             textAlign: 'center',
         }}>
             <div>Walliot cars map. Copyright © 2021</div>

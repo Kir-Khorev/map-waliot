@@ -7,7 +7,7 @@ const Header = () => {
             left: '0',
             bottom: '0',
             width: '100%',
-            padding: '15px 0',
+            padding: '10px 0',
             textAlign: 'center',
         }}>
             <div>Walliot Cars Map</div>

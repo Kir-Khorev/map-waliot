@@ -2,15 +2,14 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import classes from '../../styles/map.module.css';
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import CarsList from '../Cars/CarsList';
 
 const MapNoSSR = ({ cars }) => {
     const [map, setMap] = useState(0);
-    const zoom = 10;
+    const zoom = 15;
     const [position, setPosition] = useState(0);
-    
+
     useEffect(() => {
         async function load() {
             setMap(map)
@@ -18,15 +17,16 @@ const MapNoSSR = ({ cars }) => {
         if (!map) {
             load()
         }
-    }, [])
+    }, [map])
 
-    
-    if (!cars && !map) {
-        return <h2>Loading is map...</h2>        
-    }
+    if (!cars && !map) return <h2>Map is Loading...</h2>
 
-    const onClickFunc = useCallback((center) => {
-        map.setView(center, zoom)
+    // const onClickFunc = useCallback((center, e) => {
+    //     map.setView(center, zoom)
+    // }, [map])
+
+    const onMove = useCallback(() => {
+        setPosition(map.getCenter())
     }, [map])
 
     return (
@@ -36,12 +36,14 @@ const MapNoSSR = ({ cars }) => {
                 {
                     cars.map(elem => {
                         return <Marker key={elem.id} position={[elem.latitude, elem.longitude]} >
-                            <Popup>{elem.name}, {elem.id}</Popup>
+                            <Popup>
+                                {elem.name}, {elem.id}
+                            </Popup>
                         </Marker>
                     })
                 }
             </MapContainer>
-            <CarsList map={map} cars={cars} onClickFunc={onClickFunc} />
+            <CarsList map={map} cars={cars} onMove={onMove} />
         </>
     );
 };
