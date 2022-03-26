@@ -1,16 +1,16 @@
 import Head from "next/head"
 import Footer from "../components-layout/Footer"
 import Header from "../components-layout/Header"
-import Map from "./Map/Map"
+// import Map from "./Map/Map"
 import dynamic from "next/dynamic"
 
 export default function Index({ carsData }) {
-    const MapNoSSR = dynamic(() => import("./Map/Map.js"), {
-        ssr: false
-    })
+    // const MapNoSSR = dynamic(() => import("./Map/Map.js"), {
+    //     ssr: false
+    // })
 
     return (
-        <>
+        < >
             <Head>
                 <title>Cars Map Walliot | Khorek </title>
                 <meta name="keywords" content="map, cars,"></meta>
