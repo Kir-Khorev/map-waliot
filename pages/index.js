@@ -5,9 +5,9 @@ import Header from "../components-layout/Header"
 import dynamic from "next/dynamic"
 
 export default function Index({ carsData }) {
-    // const MapNoSSR = dynamic(() => import("./Map/Map.js"), {
-    //     ssr: false
-    // })
+    const MapNoSSR = dynamic(() => import("./Map/MapNoSSR.js"), {
+        ssr: false
+    })
 
     return (
         < >
@@ -19,7 +19,7 @@ export default function Index({ carsData }) {
             </Head>
             <Header></Header>
             {/* <Map cars={carsData}></Map> */}
-            {/* <MapNoSSR cars={carsData}/> */}
+            <MapNoSSR cars={carsData}/>
             <Footer></Footer>
         </>
     )

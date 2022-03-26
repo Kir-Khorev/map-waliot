@@ -12,17 +12,18 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import CarRentalIcon from '@mui/icons-material/CarRental';
 
 export default function CarsList({ map, cars }) {
+    console.log(map)
 
-    if (!map) {
-        return <h2>Loading is map list...</h2>
-    }
+    // if (!map) {
+    //     return <h2>Loading is map list...</h2>
+    // }
 
     return (
         <div className='carsList'>
             <h3>Available cars</h3>
             <Divider />
 
-            <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+            <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <nav aria-label="main mailbox folders">
                     <List>
                         {
