@@ -3,14 +3,28 @@ import Footer from "../components-layout/Footer"
 import Header from "../components-layout/Header"
 // import Map from "./Map/Map"
 import dynamic from "next/dynamic"
+import { useMemo } from "react"
 
 export default function Index({ carsData }) {
-    const MapNoSSR = dynamic(() => import("./Map/MapNoSSR.js"), {
-        ssr: false
-    })
+    const MapNoSSR = useMemo(
+        () => dynamic(() => import("./Map/MapNoSSR.js"), {
+            loading: () => <p>A map is loading</p>,
+            ssr: false
+        }),
+        []
+    )
+
+    // const Map = useMemo(
+    //     () =>
+    //         dynamic(() => import("../components/Map"), {
+    //             loading: () => <p>A map is loading</p>,
+    //             ssr: false
+    //         }),
+    //     []
+    // );
 
     return (
-        < >
+        <>
             <Head>
                 <title>Cars Map Walliot | Khorek </title>
                 <meta name="keywords" content="map, cars,"></meta>
@@ -19,7 +33,7 @@ export default function Index({ carsData }) {
             </Head>
             <Header></Header>
             {/* <Map cars={carsData}></Map> */}
-            <MapNoSSR cars={carsData}/>
+            <MapNoSSR cars={carsData} />
             <Footer></Footer>
         </>
     )
