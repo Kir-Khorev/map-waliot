@@ -21,13 +21,9 @@ const MapNoSSR = ({ cars }) => {
 
     if (!cars && !map) return <h2>Map is Loading...</h2>
 
-    // const onClickFunc = useCallback((center, e) => {
-    //     map.setView(center, zoom)
+    // const onMove = useCallback(() => {
+    //     setPosition(map.getCenter())
     // }, [map])
-
-    const onMove = useCallback(() => {
-        setPosition(map.getCenter())
-    }, [map])
 
     return (
         <>
@@ -43,7 +39,7 @@ const MapNoSSR = ({ cars }) => {
                     })
                 }
             </MapContainer>
-            <CarsList map={map} cars={cars} onMove={onMove} />
+            <CarsList map={map} cars={cars}  />
         </>
     );
 };

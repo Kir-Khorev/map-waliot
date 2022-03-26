@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import classes from '../../styles/map.module.css';
-import CarsList from '../Cars/CarsList';
 import dynamic from "next/dynamic"
 import carsData from '../api/carsData';
 

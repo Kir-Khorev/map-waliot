@@ -38,10 +38,6 @@ export default function CarsList({ map, cars }) {
                                         <CarsItem carsList={cars} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
                                     </ListItemButton>
                                 </ListItem>
-
-                                // <div key={e.id} onClick={() => map.setView(center, zoom)} >
-                                //     <CarsItem carsList={cars} id={e.id} name={e.name} latitude={e.latitude} longitude={e.longitude} />
-                                // </div>
                             })
                         }
                     </List>

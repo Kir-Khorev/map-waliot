@@ -4,8 +4,6 @@ import Header from "../components-layout/Header"
 import Map from "./Map/Map"
 
 export default function Index({ carsData }) {
-    console.log('cars', carsData);
-
     return (
         <>
             <Head>

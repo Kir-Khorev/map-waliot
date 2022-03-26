@@ -3,11 +3,13 @@ SPA made with React (Hooks) and Leaflet (open-source JavaScript library for mobi
 
 > - [Live Demo](https://map-waliot-test.vercel.app/) :world_map:
 
-![screenshot](src/assets/img/screenshot.png "screenshot")
+![screenshot](public/assets/img/screenshot.png "screenshot")
 
 ## Practiced:
 - React 
 - Redux 
+- Next.js
+- Material UI
 - database 
 - React hooks 
 - Leaflet library
