@@ -4,7 +4,6 @@ import Header from "../components-layout/Header"
 import Map from "./Map/Map"
 import dynamic from "next/dynamic"
 
-
 export default function Index({ carsData }) {
     const MapNoSSR = dynamic(() => import("./Map/Map.js"), {
         ssr: false
@@ -26,7 +25,7 @@ export default function Index({ carsData }) {
     )
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
     // if (!ctx.req) {
     //     return { cars: null }
     // }

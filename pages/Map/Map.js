@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from '../../styles/map.module.css';
 import dynamic from "next/dynamic"
 import carsData from '../api/carsData';
