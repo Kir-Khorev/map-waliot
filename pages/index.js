@@ -3,6 +3,7 @@ import Footer from "../components-layout/Footer"
 import Header from "../components-layout/Header"
 import Map from "./Map/Map"
 
+
 export default function Index({ carsData }) {
     return (
         <>

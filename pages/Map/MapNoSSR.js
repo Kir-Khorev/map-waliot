@@ -1,6 +1,6 @@
-import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import "leaflet-defaulticon-compatibility";
+// import "leaflet/dist/leaflet.css";
+// import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+// import "leaflet-defaulticon-compatibility";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import CarsList from '../Cars/CarsList';
