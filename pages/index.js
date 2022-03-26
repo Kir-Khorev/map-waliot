@@ -19,7 +19,7 @@ export default function Index({ carsData }) {
             </Head>
             <Header></Header>
             {/* <Map cars={carsData}></Map> */}
-            <MapNoSSR cars={carsData}/>
+            {/* <MapNoSSR cars={carsData}/> */}
             <Footer></Footer>
         </>
     )
