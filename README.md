@@ -6,10 +6,9 @@ SPA made with React (Hooks) and Leaflet (open-source JavaScript library for mobi
 ![screenshot](public/assets/img/screenshot.png "screenshot")
 
 ## Practiced:
-- React 
-- Redux 
 - Next.js
 - Material UI
+- Bootstrap
 - database 
 - React hooks 
 - Leaflet library
