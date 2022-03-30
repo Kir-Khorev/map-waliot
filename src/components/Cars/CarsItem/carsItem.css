@@ -1,5 +1,5 @@
 .carsItemWrapper {
-    border: 1px solid #525252;
+    border-bottom: 1px solid #adadada9;
 }
 
 .carsItem {
@@ -11,8 +11,6 @@
 
 .carsItemWrapper:hover {
     cursor: pointer;
-    border: 2px solid rgb(80, 2, 2);
-    background: rgba(194, 190, 190, 0.151);
 }
    
 p, h4, h3 {
