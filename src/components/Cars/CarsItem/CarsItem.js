@@ -1,15 +1,16 @@
-// import React from 'react';
-// import './carsItem.css'
+import React from 'react';
+import './carsItem.css'
 
-// export default function CarsItem({ id, name, latitude, longitude }) {
-//     return (
-//         <div className='carsItemWrapper'>
-//             <div className='carsItem'>
-//                 <h3>Model: {name}, Id:{id}</h3>
-//                 <div>
-//                     <p>Latitude : {latitude}, Longitude: {longitude}</p>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
+export default function CarsItem({ id, name, latitude, longitude }) {
+    return (
+        <div className='carsItemWrapper'>
+            <div className='carsItem'>
+                <h3>Model: {name}, Id:{id}</h3>
+                <div>
+                    {/* <h4>Coordinates:</h4> */}
+                    <p>Latitude : {latitude}, Longitude: {longitude}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
